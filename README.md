@@ -1,5 +1,5 @@
 # cylex_cuzdan
-                                                                                                                                  AÇIKLAMA
+                                                                 AÇIKLAMA
 Bir çok sunucuda gördüğüm çok basit bir script. Kendi sunucumda kullanmak için yapmıştım ve paylaşma kararı aldım.
 
                                                                  KURULUM
