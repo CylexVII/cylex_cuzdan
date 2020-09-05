@@ -15,15 +15,6 @@ ESX             				 = nil
 
 -- Servern callback
 
-RegisterNetEvent('jsfour-legitimation:open')
-AddEventHandler('jsfour-legitimation:open', function(playerData)
-	cardOpen = true
-	SendNUIMessage({
-		action = "open",
-		array = playerData
-	})
-end)
-
 Citizen.CreateThread(function()
     while ESX == nil do
         TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -135,15 +126,3 @@ function OpenCivilianActionsMenu()
     end
   )
 end
-
-Citizen.CreateThread(function()
-	while true do
-		Wait(0)
-		if IsControlPressed(0, 322) or IsControlPressed(0, 177) and cardOpen then
-			SendNUIMessage({
-				action = "close"
-			})
-			cardOpen = false
-		end
-	end
-end)
